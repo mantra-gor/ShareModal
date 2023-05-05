@@ -1,0 +1,274 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+body{
+    background-color: black;
+    color: white;
+}
+#wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.red-circle{
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 100%;
+    box-shadow: 0 0 50px #d84869;
+    background: linear-gradient(-25deg, #d84869, #f46641);
+
+    animation-name: red-circle-animation;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.purple-circle{
+    position: absolute;
+    bottom: 5%;
+    right: 30%;
+    width: 19em;
+    height: 19em;
+    border-radius: 100%;
+    box-shadow: 0 0 50px #5648d8;
+    background: linear-gradient(-25deg, #5648d8, #8641f4);
+
+    
+    animation-name: purple-circle-animation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    height: 500px;
+    border: 2px solid #ffffff30;
+    border-radius: 15px;
+    background: #ffffff1a;
+    /* color: white; */
+    backdrop-filter: blur(15px);
+    padding: 20px 50px;
+}
+.image{
+    border: 2px solid #ffffff30;
+    border-radius: 100%;
+}
+.name{
+    margin-top: 1.2rem;
+}
+.heading{
+    color: #ffffff85;
+    font-size: 1.1rem;
+    margin: 1rem;
+}
+.btns{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.share-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 12px;
+    background: #ffffff00;
+    border: 2px solid #ffffffb9;
+    border-radius: 4px;
+    color: #ffffffb9;
+    transition: background-color 300ms;
+    transition: color 300ms;
+}
+.share-btn:hover{
+    cursor: pointer;
+    color: black;
+    background-color: rgba(240, 248, 255, 0.85);   
+}
+.follow-btn{
+    width: 150px;
+    background: #ffffff00;
+    border: 2px solid #ffffffb9;
+    border-radius: 4px;
+    color: #ffffffb9;
+    transition: background-color 300ms;
+    transition: color 300ms;
+}
+.follow-btn:hover{
+    cursor: pointer;
+    color: black;
+    background-color: rgba(240, 248, 255, 0.85);   
+}
+
+
+/* modal section */
+.modal-wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    color: white;
+    scale: 0;
+    transition: scale 500ms ease-in-out;
+    z-index: 10;
+}
+.modal-box{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 560px;
+    transform: translate(50%,-50%);
+    padding: 20px 25px;
+    background: #00000088;
+    backdrop-filter: blur(10px);
+    border: 2px solid #ffffff59;
+    border-radius: 20px;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+    transition: scale 500ms;
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff88;
+    font-size: 2em;
+}
+.modal-heading{
+    font-size: 2rem;
+}
+.close{
+    cursor: pointer;
+}
+.icon-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon{
+    padding: 17px;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 1.75rem;
+}
+#facebook{
+    color: #1877F2;
+    border: 1px solid #1877F2;
+    transition-duration: 200ms;
+}
+#facebook:hover{
+    background-color: #1877F2;
+    color: white;
+    border: 1px solid #1877F2;
+}
+
+#twitter{
+    color: #1DA1F2;
+    border: 1px solid #1DA1F2;
+    transition-duration: 200ms;
+}
+#twitter:hover{
+    background-color: #1DA1F2;
+    color: white;
+    border: 1px solid #1DA1F2;
+}
+
+#instagram{
+    color: #E4405F;
+    border: 1px solid #E4405F;
+    transition-duration: 200ms;
+}
+#instagram:hover{
+    background-color: #E4405F;
+    color: white;
+    border: 1px solid #E4405F;
+}
+
+#linkedin{
+    color: #0A66C2;
+    border: 1px solid #0A66C2;
+    transition-duration: 200ms;
+}
+#linkedin:hover{
+    background-color: #0A66C2;
+    color: white;
+    border: 1px solid #0A66C2;
+}
+
+#whatsapp{
+    color: #25D366;
+    border: 1px solid #25D366;
+    transition-duration: 200ms;
+}
+#whatsapp:hover{
+    background-color: #25D366;
+    color: white;
+    border: 1px solid #25D366;
+}
+
+.overlay{
+    position: fixed;
+    background-color: #00000020;
+    backdrop-filter: blur(2px);
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+}
+.overlayActive{
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.active{
+    scale: 1;
+}
+
+/* Animations */
+
+@keyframes red-circle-animation {
+    0%{
+        scale: 100%;
+        transform: translate(-8%,-4%);
+    }
+    100%{
+        scale: 110%;
+        transform: translate(8%,4%);
+    }
+}
+@keyframes purple-circle-animation {
+    0%{
+        scale: 100%;
+        transform: translate(-8%,3%);
+    }
+    100%{
+        scale: 110%;
+        transform: translate(8%,-3%);
+    }
+}
