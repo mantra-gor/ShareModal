@@ -64,6 +64,7 @@ body{
 .image{
     border: 2px solid #ffffff30;
     border-radius: 100%;
+    -webkit-user-drag: none;
 }
 .name{
     margin-top: 1.2rem;
